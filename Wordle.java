@@ -1,21 +1,12 @@
-/*
- * File: Wordle.java
- * -----------------
- * This module is the starter file for the Wordle assignment.
- * BE SURE TO UPDATE THIS COMMENT WHEN YOU COMPLETE THE CODE.
- */
+
 
 import java.util.Random;
 
 public class Wordle {
-    /* Private instance variables */
-    // TODO: Add any extra instance variables here, if any
+
 
     private WordleGWindow gw;
 
-    /**
-     * returns a random word from WordleDictionary.
-     */
     public String chooseWord() {
         int size = WordleDictionary.FIVE_LETTER_WORDS.length;
         int randomIndex = new Random().nextInt(size);
@@ -27,8 +18,7 @@ public class Wordle {
 
 
     public void run() {
-        // DEBUG: useful for testing
-        // word = "GLASS";
+        // word = "PENIS";
         word = chooseWord(); // choose random word
         gw = new WordleGWindow();
         /*        for (int i = 0; i < 5; i++) {
@@ -79,36 +69,6 @@ public class Wordle {
         gw.showMessage("Word Doesn't Exist ");
     }
 
-
-    /**
-     * @param guess the user's guess
-     * @param word  the secret word to be guessed
-     * @return a String version of the hint where a capital letter
-     * represents a correct guess at the correct location, a lower
-     * case letter represents a correct guess at the wrong location,
-     * and a '*' represents an incorrect letter (neither in the
-     * correct place nor a correct letter anywhere in the word)
-     * <p>
-     * You will use this helper method when coloring the squares.
-     * It's also the crucial method that is tested in codePost.
-     * <p>
-     * Examples:
-     * word        = "CLASS"
-     * guess       = "SASSY"
-     * returns:      "sa*S*"
-     * <p>
-     * word        = "FLUFF"
-     * guess       = "OFFER"
-     * returns:      "*ff**"
-     * <p>
-     * word        = "STACK"
-     * guess       = "TASTE"
-     * returns:      "tas**"
-     * <p>
-     * word        = "MYTHS"
-     * guess       = "HITCH"
-     * returns:      "h*T**"
-     */
     public String getHint(String guess1, String word1) {
         char[] word = word1.toUpperCase().toCharArray();
         char[] guess = guess1.toUpperCase().toCharArray();
@@ -141,7 +101,6 @@ public class Wordle {
 
     }
 
-    /* Startup code */
 
     public static void main(String[] args) {
 
