@@ -26,14 +26,11 @@ public class Wordle {
         }
 
         gw.setCurrentRow(gw.getCurrentRow()+1);
+        L+ratio doesn't work + screw you
     */
         gw.addEnterListener((s) -> enterAction(s));
     }
 
-    /*
-     * Called when the user hits the RETURN key or clicks the ENTER button,
-     * passing in the string of characters on the current row.
-     */
 
     public void enterAction(String guess) {
         String result = getHint(guess, word);
