@@ -1,3 +1,2 @@
-# Wordle
+# Wordle in Java with GUI
 
-Wordle in Java with GUI
